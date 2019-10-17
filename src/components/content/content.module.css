@@ -9,5 +9,6 @@
 .ContentDisplay{
     background: #fff;
     padding: 24px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }

@@ -1,13 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {AutoComplete, Col, Icon, Input, Layout, Menu} from "antd";
 import style from "./custom-header.module.css";
 import {usePromiseTracker} from "react-promise-tracker";
-import {connect} from "react-redux";
+import {useSelector} from "react-redux";
+
 const { Header } = Layout;
 
 const CustomHeader = (props) => {
 
     const { promiseInProgress } = usePromiseTracker();
+
+    const stores = useSelector((state) => state.storeReducer.stores);
+
 
     return (
         <Header>
@@ -22,7 +26,7 @@ const CustomHeader = (props) => {
                             option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                         }
                         onSelect={props.onSelect}
-                        dataSource={props.stores}
+                        dataSource={stores}
                         disabled={promiseInProgress}
                         className={style.AutoComplete}
                         placeholder="Search">
@@ -38,10 +42,5 @@ const CustomHeader = (props) => {
 }
 
 
-const mapStateToProps = (state) => {
-    return {
-        stores: state.storeReducer.stores
-    }
-}
 
-export default connect(mapStateToProps, null)(CustomHeader);
+export default CustomHeader;
