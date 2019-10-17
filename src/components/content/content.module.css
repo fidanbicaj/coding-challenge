@@ -1,0 +1,13 @@
+.Content {
+    padding: 0 50px;
+}
+
+.Separator{
+    margin: 16px 0;
+}
+
+.ContentDisplay{
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
