@@ -3,7 +3,7 @@ import {AutoComplete, Col, Icon, Input, Layout, Menu} from "antd";
 import style from "./custom-header.module.css";
 import {usePromiseTracker} from "react-promise-tracker";
 import {connect} from "react-redux";
-const { Header, Content, Footer } = Layout;
+const { Header } = Layout;
 
 const CustomHeader = (props) => {
 

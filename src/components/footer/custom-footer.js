@@ -7,7 +7,7 @@ const { Footer } = Layout;
 const CustomFooter = () => {
 
     return (
-        <Footer className={style.Footer}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer className={style.Footer}>Coding Challenge</Footer>
     );
 }
 
